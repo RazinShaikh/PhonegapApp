@@ -29,14 +29,10 @@
     <!-- Status bar overlay for full screen mode (PhoneGap) -->
     <div class="statusbar-overlay"></div>
 
-    <!-- Views -->
-    <div class="views">
-        <!-- Your main view, should have "view-main" class -->
-        <div class="view view-main">
-            <!-- Top Navbar-->
+    <div class="views tabs toolbar-fixed">
+        <div id="tab1" class="view tab active">
             <div class="navbar">
                 <div class="navbar-inner">
-                    <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
                     <div class="left">
                         <a href="#" class="link icon-only">
                             <i class="f7-icons">add_round</i>
@@ -51,9 +47,9 @@
                 </div>
             </div>
             <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
-            <div class="pages navbar-through toolbar-through">
+            <div class="pages navbar-fixed">
                 <!-- Page, "data-page" contains page name -->
-                <div data-page="index" class="page">
+                <div data-page="home-1" class="page">
                     <!-- Scrollable page content -->
                     <div class="page-content">
                         <div class="content-block">
@@ -129,15 +125,67 @@
                     </div>
                 </div>
             </div>
-            <!-- Bottom Toolbar-->
-            <div class="toolbar tabbar">
-                <div class="toolbar-inner">
-                    <!-- Toolbar links -->
-                    <a href="#tab1" class="tab-link active"><i class="f7-icons">collection_fill</i></a>
-                    <a href="#tab2" class="tab-link active"><i class="f7-icons">compass</i></a>
-                    <a href="#tab2" class="tab-link active"><i class="f7-icons">card</i></a>
-                    <a href="#tab2" class="tab-link active"><i class="f7-icons">heart</i></a>
+        </div>
+
+        <div id="tab2" class="view tab">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="center">Search</div>
                 </div>
+            </div>
+            <div class="pages navbar-fixed">
+                <div data-page="home-2" class="page">
+                    <div class="page-content">
+                      <div class="content-block">
+                        <p>Work in progres.</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="tab3" class="view tab">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="center">Wallet</div>
+                </div>
+            </div>
+            <div class="pages navbar-fixed">
+                <div data-page="home-2" class="page">
+                    <div class="page-content">
+                      <div class="content-block">
+                        <p>Work in progres.</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="tab4" class="view tab">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="center">Activity</div>
+                </div>
+            </div>
+            <div class="pages navbar-fixed">
+                <div data-page="home-2" class="page">
+                    <div class="page-content">
+                      <div class="content-block">
+                        <p>Work in progres.</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Toolbar-->
+        <div class="toolbar tabbar">
+            <div class="toolbar-inner">
+                <!-- Toolbar links -->
+                <a href="#tab1" class="tab-link active"><i class="f7-icons">collection</i></a>
+                <a href="#tab2" class="tab-link"><i class="f7-icons">compass</i></a>
+                <a href="#tab3" class="tab-link"><i class="f7-icons">card</i></a>
+                <a href="#tab4" class="tab-link"><i class="f7-icons">heart</i></a>
             </div>
         </div>
     </div>
