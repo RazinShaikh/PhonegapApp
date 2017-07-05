@@ -22,3 +22,11 @@
     width: 100%;
     height: 200px;
 }
+
+.navbar-inner{
+    color: rgb(0, 122, 255);
+}
+
+.item-title{
+    color: rgb(0,10,50);
+}
