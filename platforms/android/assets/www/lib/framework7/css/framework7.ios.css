@@ -2266,7 +2266,7 @@ html.pixel-ratio-3 .list-block .item-inner:after {
   -webkit-flex-shrink: 1;
   -ms-flex: 0 1 auto;
   flex-shrink: 1;
-  min-width: 0;
+  min-width: 100%;
   white-space: nowrap;
   position: relative;
   overflow: hidden;
@@ -2543,7 +2543,7 @@ html.ios-gt-8 .list-block li.media-item .item-title {
 .list-block .list-group-title {
   background: #F7F7F7;
   margin-top: -1px;
-  padding: 4px 15px;
+  padding: 6.5px 15px;
   white-space: nowrap;
   position: relative;
   max-width: 100%;
