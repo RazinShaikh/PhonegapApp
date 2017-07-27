@@ -1,19 +1,22 @@
 // Initialize app
 var myApp = new Framework7();
 
-
 // If we need to use custom DOM library, let's save it to $$ variable:
 var $$ = Dom7;
 
-// Add view
-// var mainView = myApp.addView('.view-main', {
-//     // Because we want to use dynamic navbar, we need to enable it for this view:
-//     dynamicNavbar: true
-// });
-
-// Handle Cordova Device Ready Event
 $$(document).on('deviceready', function() {
-    console.log("Device is ready!");
+    console.log("Getting data from server");
+    $$.ajax({
+        datatype: 'json',
+        type: 'GET',
+        cache: true,
+        url: 'http://192.168.0.102:8000/activity/',
+        success: function(data) {
+            var articles = JSON.parse(data);
+            addArticlesLatest(articles);
+            addArticlesHot(articles);
+        }
+    });
 });
 
 var mySwiper = myApp.swiper('.swiper-container', {
@@ -22,37 +25,16 @@ var mySwiper = myApp.swiper('.swiper-container', {
     // spaceBetween: 100
 });
 
+function addArticlesLatest(data) {
+    for (var i = 0; i < data.length; i++) {
+        htmlStr = "<div class=\"card myCard\"><div class=\"card-content\"><div class=\"card-content-inner\"><div class=\"row\"><div class=\"col-50\"><img src=\"img/1.jpg\" height=\"90\" width=\"147\"></div><div class=\"col-50\">" + data[i].title + "</div></div></div></div></div>"
+        $$(pageTab2).append(htmlStr);
+    }
+}
 
-
-
-
-
-
-
-
-
-
-// // Now we need to run the code that will be executed only for About page.
-//
-// // Option 1. Using page callback for page (for "about" page in this case) (recommended way):
-// myApp.onPageInit('about', function (page) {
-//     // Do something here for "about" page
-//
-// })
-//
-// // Option 2. Using one 'pageInit' event handler for all pages:
-// $$(document).on('pageInit', function (e) {
-//     // Get page data from event data
-//     var page = e.detail.page;
-//
-//     if (page.name === 'about') {
-//         // Following code will be executed for page with data-page attribute equal to "about"
-//         myApp.alert('Here comes About page');
-//     }
-// })
-//
-// // Option 2. Using live 'pageInit' event handlers for each page
-// $$(document).on('pageInit', '.page[data-page="about"]', function (e) {
-//     // Following code will be executed for page with data-page attribute equal to "about"
-//     myApp.alert('Here comes About page');
-// })
+function addArticlesHot(data) {
+    for (var i = 0; i < data.length; i++) {
+        htmlStr = "<div class=\"card myCard\"><div class=\"card-content\"><div class=\"card-content-inner\"><div class=\"row\"><div class=\"col-50\"><img src=\"img/2.jpg\" height=\"90\" width=\"147\"></div><div class=\"col-50\">" + data[i].title + "</div></div></div></div></div>"
+        $$(pageTab1).append(htmlStr);
+    }
+}

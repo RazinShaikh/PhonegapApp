@@ -2,7 +2,7 @@
 <html>
 <head>
 
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *"> -->
 
     <!-- Required meta tags-->
     <meta charset="utf-8">
@@ -14,10 +14,6 @@
 
     <title>UNNC</title>
 
-    <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
-        http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
-     -->
-
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="lib/framework7/css/framework7.ios.css">
     <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
@@ -27,8 +23,6 @@
 </head>
 
 <body class="theme-blue">
-    <!-- Status bar overlay for full screen mode (PhoneGap) -->
-    <div class="statusbar-overlay"></div>
 
     <div class="views tabs toolbar-fixed">
         <div id="tab1" class="view tab active">
@@ -47,6 +41,7 @@
                     </div>
                 </div>
             </div>
+
             <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
             <div class="pages navbar-fixed">
                 <!-- Page, "data-page" contains page name -->
@@ -77,101 +72,14 @@
                             </p>
 
                             <div class="tabs">
-                                <div id="pageTab1" class="tab">
-                                    <div class="card myCard">
-                                        <div class="card-content">
-                                            <a href="#">
-                                                <div class="card-content-inner">
-                                                    <div class="row">
-                                                        <div class="col-50">
-                                                            <img src="img/2.jpg" height="90" width="147">
-                                                        </div>
-                                                        <div class="col-50">
-                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="card myCard">
-                                        <div class="card-content">
-                                            <div class="card-content-inner">
-                                                <div class="row">
-                                                    <div class="col-50">
-                                                        <img src="img/3.jpg" height="90" width="147">
-                                                    </div>
-                                                    <div class="col-50">
-                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card myCard">
-                                        <div class="card-content">
-                                            <div class="card-content-inner">
-                                                <div class="row">
-                                                    <div class="col-50">
-                                                        <img src="img/1.jpg" height="90" width="147">
-                                                    </div>
-                                                    <div class="col-50">
-                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="pageTab2" class="tab active">
-                                    <div class="card myCard">
-                                        <div class="card-content">
-                                            <div class="card-content-inner">
-                                                <div class="row">
-                                                    <div class="col-50">
-                                                        <img src="img/1.jpg" height="90" width="147">
-                                                    </div>
-                                                    <div class="col-50">
-                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card myCard">
-                                        <div class="card-content">
-                                            <div class="card-content-inner">
-                                                <div class="row">
-                                                    <div class="col-50">
-                                                        <img src="img/2.jpg" height="90" width="147">
-                                                    </div>
-                                                    <div class="col-50">
-                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card myCard">
-                                        <div class="card-content">
-                                            <div class="card-content-inner">
-                                                <div class="row">
-                                                    <div class="col-50">
-                                                        <img src="img/3.jpg" height="90" width="147">
-                                                    </div>
-                                                    <div class="col-50">
-                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <div id="pageTab1" class="tab"></div>
+                                <div id="pageTab2" class="tab active"></div>
                                 <div id="pageTab3" class="tab">
                                     <p> Add some sample notice here </p>
                                 </div>
                             </div>
 
+                            <!-- <a href="#" id="test">Hello</a> -->
                             <!-- <a href="about.html">about</a> -->
 
                         </div>
