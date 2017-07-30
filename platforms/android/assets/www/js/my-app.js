@@ -19,11 +19,6 @@ $$(document).on('deviceready', function() {
     });
 });
 
-var mySwiper = myApp.swiper('.swiper-container', {
-    speed: 400,
-    pagination: '.swiper-pagination'
-    // spaceBetween: 100
-});
 
 function addArticlesLatest(data) {
     for (var i = 0; i < data.length; i++) {
@@ -38,3 +33,12 @@ function addArticlesHot(data) {
         $$(pageTab1).append(htmlStr);
     }
 }
+
+
+
+
+var mySwiper = myApp.swiper('.swiper-container', {
+    speed: 400,
+    pagination: '.swiper-pagination'
+    // spaceBetween: 100
+});
