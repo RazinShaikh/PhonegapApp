@@ -11,7 +11,7 @@ var mainView = myApp.addView('.view-main');
 var ptrContent = $$('.pull-to-refresh-content');
 
 
-//myApp.onPageInit('home-1', loadArticleList());
+myApp.onPageInit('home-1', loadArticleList());
 
 
 function addArticlesLatest(data) {
