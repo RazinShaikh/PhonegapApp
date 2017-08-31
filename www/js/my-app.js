@@ -7,10 +7,6 @@ var $$ = Dom7;
 // Add view
 var mainView = myApp.addView('.view-main');
 
-//Pull to refresh content
-var ptrContent = $$('.pull-to-refresh-content');
-
-
 myApp.onPageInit('home-1', loadArticleList());
 
 
@@ -77,20 +73,19 @@ function loadArticleList() {
 
 
 function viewArticle(id) {
-    console.log(id);
-    mainView.router.loadPage('article.html'); console.log("Fetching article from server");
+    console.log("Fetching article " + id + " from server");
     mainView.router.loadPage('article.html');
-	$$.ajax({
+    $$.ajax({
         datatype: 'json',
         type: 'GET',
         cache: true,
         url: 'http://192.168.0.102:8080/activity/'+id+'.json',
         success: function(data) {
             var article = JSON.parse(data);
-			$$('#articleTitle').html(article.title);
-			$$('#articleBody').html(article.body);
-			console.log("data loaded");
-		}
+            $$('#articleTitle').html(article.title);
+            $$('#articleBody').html(article.body);
+            console.log("data loaded");
+        }
     });
 }
 
@@ -100,12 +95,6 @@ myApp.onPageInit('about', function (page) {
 });
 
 
-
-ptrContent.on('ptr:refresh', function (e) {
-    console.log("In pull to refresh");
-    loadArticleList();
-    myApp.pullToRefreshDone();
-});
 
 
 
