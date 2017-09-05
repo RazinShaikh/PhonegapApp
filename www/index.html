@@ -24,6 +24,60 @@
 
 <body class="theme-blue">
 
+    <div class="login-screen modal-in">
+        <div class="view view-login">
+            <div class="pages">
+
+                <div data-page="login" class = "page">
+                    <div class = "page-content login-screen-content">
+                        <div class = "login-screen-title">
+                            <img src="img/person.png" class="person">
+                        </div>
+
+                        <form>
+                            <input type = "text" class="inputformat" name = "username" placeholder = "Username">
+                            <input type = "password" class="inputformat" name = "password" placeholder = "Password">
+                            <div id="login" class="button login-button">log in</div>
+                        </form>
+                        <div class="login-footer">
+                            <a href="#">
+                                <div class="bottom-text left">
+                                    Forgot passowrd?
+                                </div>
+                            </a>
+                            <div class="vertical-line"></div>
+                            <a href="#signup">
+                                <div class="bottom-text right">
+                                    Create an account
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div data-page="signup" class = "page cached">
+                    <div class = "page-content login-screen-content">
+                        <div class = "login-screen-title">
+                            <img src="img/person.png" class="person">
+                        </div>
+
+                        <form>
+                            <div class="list-block">
+                                <input type = "text" class="inputformat" name = "S-username" placeholder = "Username">
+                                <input type = "email" class="inputformat" name = "S-email" placeholder = "Email">
+                                <input type = "password" class="inputformat" name = "S-password" placeholder = "Password">
+                            </div>
+                            <a href="#" id="good" class="button button-big button-fill">Sign Up</a>
+                            <a href="#login" class="center back">Go back to login</a>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     <div class="views tabs toolbar-fixed">
         <div id="tab1" class="view tab active view-main">
             <div class="navbar">
@@ -267,6 +321,7 @@
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
     <script type="text/javascript" src="js/my-app.js"></script>
+    <script type="text/javascript" src="js/my-app-login.js"></script>
 </body>
 
 </html>

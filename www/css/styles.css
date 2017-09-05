@@ -10,6 +10,14 @@
    See https://github.com/apache/cordova-plugin-statusbar
 */
 
+.left{
+    float:left;
+}
+
+.right{
+    float:right;
+}
+
 .statusbar-overlay {
     background: #000000;
 }
@@ -36,10 +44,80 @@
 }
 
 #articleTitle{
-	font-size: 30px;
-	font-weight: bold;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 #articleBody{
-	font-size: 16px;
+    font-size: 16px;
+}
+
+.login-button{
+    margin: auto;
+    width: 46%;
+    background-color: #2E6B7E;
+    border: none;
+    color: #4FC1E6;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-family: "Microsoft JhengHei UI";
+    font-weight: 100;
+    border-radius: 30px;
+    box-shadow: 0px 3px 2px 2px rgba(0,0,0,0.25);
+}
+
+.login-screen-content{
+    background: url('../img/login-background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.inputformat {
+    display: block;
+    height: 45px;
+    margin: auto;
+    width: 62%;
+    margin-bottom: 54px;
+    border: none;
+    border-radius: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-shadow: 0px 3px 2px 2px rgba(0,0,0,0.25);
+    font-size: 20px;
+}
+
+.person{
+    width: 29%;
+    margin-top: 4.5%;
+    margin-bottom: 4%;
+}
+
+.login-footer{
+    font-size: 18px;
+    position: absolute;
+    bottom: 4%;
+    width: 85%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    font-family: "Microsoft JhengHei UI";
+    font-weight: lighter;
+}
+.bottom-text{
+    color: white;
+}
+
+.vertical-line{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    border-left: 1.7px solid white;
+    transform: translate(-50%);
 }
